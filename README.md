@@ -28,13 +28,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Comando para instalar angular
 
-npm i @angular/cli -g 
+npm i @angular/cli -g
 
 ## Comando para creación de aplicaciones
 
 ng new (nombre se proyecto) --skip-tests
 
-## Comando para Despliegue de aplicacion
+## Comando para despliegue de aplicacion
 
 ng serve
 
@@ -43,3 +43,16 @@ ng serve
 ng g component pages/(ruta)
 
 Con el atributo path se indica qué componente se va renderizar en cada ruta
+
+## String Interpolation {{}}
+
+Es una técnica de enlace de datos unidireccional que se utiliza para generar datos de un código TypeScript a una plantilla HTML
+
+### ¿Que más puedes hacer con String Interpolation?
+
+Puedes tener condiciones, como:
+{{ isDisabled ? 'Verdadero' : 'Falso' }}
+Ejecutar funciones, como {{ saludar() }}
+Acceder a propiedades de objetos {{ person.name }}
+
+## Property biding []
