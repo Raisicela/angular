@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Comando para instalar angular
+
+npm i @angular/cli -g 
+
+## Comando para creación de aplicaciones
+
+ng new (nombre se proyecto) --skip-tests
+
+## Comando para Despliegue de aplicacion
+
+ng serve
+
+## Comando para generar componentes
+
+ng g component pages/(ruta)
+
+Con el atributo path se indica qué componente se va renderizar en cada ruta
