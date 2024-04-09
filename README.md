@@ -46,7 +46,7 @@ Con el atributo path se indica qué componente se va renderizar en cada ruta
 
 ## String Interpolation {{}}
 
-Es una técnica de enlace de datos unidireccional que se utiliza para generar datos de un código TypeScript a una plantilla HTML
+Es una técnica de enlace de datos unidireccional que se utiliza para generar datos de un código TypeScript a una plantilla HTML. Renderizan el html.
 
 ### ¿Que más puedes hacer con String Interpolation?
 
