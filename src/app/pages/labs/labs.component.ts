@@ -16,13 +16,13 @@ export class LabsComponent {
     'Crear componentes',
     'Crear servicio'
   ]);
-  name = 'Raisa'
+  name = signal('Raisa')
   age = 31
   disabled = 'true'
   img = 'https://w3schools.com/howto/img_avatar.png';
   person = signal({
     name: 'Raisa',
-    age: 31,
+    age: 3,
     avatar: 'https://w3schools.com/howto/img_avatar.png'
   })
 
@@ -40,5 +40,24 @@ export class LabsComponent {
     const input = event.target as HTMLInputElement
     console.log(input.value)
   }
-
+  changeAge(event: Event) {
+    const input = event.target as HTMLInputElement
+    this.person.update(prevState => {
+      return {
+        ...prevState,
+        age: parseInt(input.value)
+      }
+    })
+    console.log(input.value)
+   }
+  changeName(event: Event) {
+    const inputName = event.target as HTMLInputElement
+    this.person.update(prevState => {
+      return {
+        ...prevState,
+        name: inputName.value
+      }
+    })
+    console.log(inputName.value)
+   }
 }

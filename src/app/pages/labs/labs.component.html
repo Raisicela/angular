@@ -10,7 +10,7 @@
   <h2>{{ "Hola".repeat(4) }}</h2>
   <h2>{{ tasks().join(",") }}</h2>
   <p>la suma de 3 + 3 es {{ 3 + 3 }}</p>
-  <p>Hola soy {{ name }} y mi edad es {{ age }}</p>
+  <p>Hola soy {{ name() }} y mi edad es {{ age }}</p>
   <hr />
   <img [src]="person().avatar" alt="" />
   <input type="number" [value]="person().age" />
@@ -50,4 +50,20 @@
     (change)="changeHandler($event)"
   />
   <p>person: {{ person().name }}, {{ person().age }} años</p>
+  <hr />
+  <input type="number" [value]="person().age" (change)="changeAge($event)" />
+  <div *ngIf="person().name === 'Raisa' && person().age > 18; else elseBlock">
+    Soy Raisa y soy mayor de edad
+  </div>
+  <ng-template #elseBlock> Soy Raisa y soy menor de edad </ng-template>
+  <hr />
+  <input type="text" [value]="person().name" (change)="changeName($event)" />
+  <div [ngSwitch]="person().name">
+    <p *ngSwitchCase="'Raisa'">yo soy Raisa</p>
+    <p *ngSwitchCase="'Nicola'">yo soy Nicolas</p>
+    <p *ngSwitchCase="'Julian'">yo soy Julian</p>
+    <p *ngSwitchCase="'Freddy'">yo soy Freddy</p>
+    <p *ngSwitchDefault>yo soy nadie</p>
+  </div>
+  <hr />
 </div>
